@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="timer">Time: 00:00</div>
+    </header>
+    
+    <div class="section start-screen active">
+        <div class="quiz-screen">
+            <div class="quiz-icon"></div>
+            <h1 class="quiz-title">QUIZ</h1>
+            <div class="quiz-icon"></div>
+            
+            <button class="start-button" onclick="startQuiz()">START</button>
+        </div>
+    </div>
+   
+    <div class="section question-1">
+        
+        <div class="quiz-screen">
+            <div class="question-container">
+                <h2 class="question-number">01</h2><br><br>
+                <p class="question-text">Which planet in the Solar System is the smallest?</p>
+            </div>
+            <div class="options-container">
+                <button class="option false" onclick="checkAnswer('question-1', false)">A. Pluto</button>
+                <button class="option false" onclick="checkAnswer('question-1', false)">B. Earth</button>
+                <button class="option true" onclick="checkAnswer('question-1', true)">C. Mercury</button>
+                <button class="option false" onclick="checkAnswer('question-1', false)">D. Mars</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section question-2">
+        <div class="quiz-screen">
+            <div class="question-container">
+                <h2 class="question-number">02</h2><br><br>
+                <p class="question-text">How many days are there in a week?</p>
+            </div>
+            <div class="options-container">
+                <button class="option false" onclick="checkAnswer('question-2', false)">A. 5</button>
+                <button class="option false" onclick="checkAnswer('question-2', false)">B. 2</button>
+                <button class="option false" onclick="checkAnswer('question-2', false)">C. 10</button>
+                <button class="option true" onclick="checkAnswer('question-2', true)">D. 7</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section question-3">
+        <div class="quiz-screen">
+            <div class="question-container">
+                <h2 class="question-number">03</h2><br><br>
+                <p class="question-text">Which European Country sells the most oil?</p>
+            </div>
+            <div class="options-container">
+                <button class="option true" onclick="checkAnswer('question-3', true)">A. Norway</button>
+                <button class="option false" onclick="checkAnswer('question-3', false)">B. America</button>
+                <button class="option false" onclick="checkAnswer('question-3', false)">C. Asia</button>
+                <button class="option false" onclick="checkAnswer('question-3', false)">D. United kingdom</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section question-4">
+        <div class="quiz-screen">
+            <div class="question-container">
+                <h2 class="question-number">04</h2><br><br>
+                <p class="question-text">The Russian and Ukraine war was as a result of?</p>
+            </div>
+            <div class="options-container">
+                <button class="option false" onclick="checkAnswer('question-4', false)">A. Power tussle</button>
+                <button class="option true" onclick="checkAnswer('question-4', true)">B. Land Dispute</button>
+                <button class="option false" onclick="checkAnswer('question-4', false)">C. Traditional background</button>
+                <button class="option false" onclick="checkAnswer('question-4', false)">D. Oil</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section question-5">
+        <div class="quiz-screen">
+            <div class="question-container">
+                <h2 class="question-number">05</h2><br><br>
+                <p class="question-text">What is your dream country?</p>
+            </div>
+            <div class="options-container">
+                <button class="option false" onclick="checkAnswer('question-5', false)">A. Spain</button>
+                <button class="option true" onclick="checkAnswer('question-5', true)">B. Maldives</button>
+                <button class="option false" onclick="checkAnswer('question-5', false)">C. UK</button>
+                <button class="option false" onclick="checkAnswer('question-5', false)">D. Nigeria</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section question-6">
+        <div class="quiz-screen">
+            <div class="question-container">
+                <h2 class="question-number">06</h2><br><br>
+                <p class="question-text">Why do we study Technology?</p>
+            </div>
+            <div class="options-container">
+                <button class="option false" onclick="checkAnswer('question-6', false)">A. For the money</button>
+                <button class="option false" onclick="checkAnswer('question-6', false)">B. For flex</button>
+                <button class="option true" onclick="checkAnswer('question-6', true)">C. For fun</button>
+                <button class="option false" onclick="checkAnswer('question-6', false)">D. For Spritual Consultation</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section question-7">
+        <div class="quiz-screen">
+            <div class="question-container">
+                <h2 class="question-number">07</h2><br><br>
+                <p class="question-text">Define Water</p>
+            </div>
+            <div class="options-container">
+                <button class="option false" onclick="checkAnswer('question-7', false)">A. Water is a sweet substance</button>
+                <button class="option false" onclick="checkAnswer('question-7', false)">B. Water is a caramel liquid made up of cubes which solidifies</button>
+                <button class="option false" onclick="checkAnswer('question-7', false)">C. Water can be defined as liquid</button>
+                <button class="option true" onclick="checkAnswer('question-7', true)">D. Water can be defined as a liquid substance which is seen to be colorless, and tasteless</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section question-8">
+        <div class="quiz-screen">
+            <div class="question-container">
+                <h2 class="question-number">08</h2><br><br>
+                <p class="question-text">How many countries do we have in the world</p>
+            </div>
+            <div class="options-container">
+                <button class="option true" onclick="checkAnswer('question-8', true)">A. 195</button>
+                <button class="option false" onclick="checkAnswer('question-8', false)">B. 50</button>
+                <button class="option false" onclick="checkAnswer('question-8', false)">C. 360</button>
+                <button class="option false" onclick="checkAnswer('question-8', false)">D. 150</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section question-9">
+        <div class="quiz-screen">
+            <div class="question-container">
+                <h2 class="question-number">09</h2><br><br>
+                <p class="question-text">Pancake is made up of?</p>
+            </div>
+            <div class="options-container">
+                <button class="option false" onclick="checkAnswer('question-9', false)">A. flour</button>
+                <button class="option false" onclick="checkAnswer('question-9', false)">B. water and garri</button>
+                <button class="option true" onclick="checkAnswer('question-9', true)">C. flour, milk, sugar and syrub</button>
+                <button class="option false" onclick="checkAnswer('question-9', false)">D. milk</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section question-10">
+        <div class="quiz-screen">
+            <div class="question-container">
+                <h2 class="question-number">10</h2><br><br>
+                <p class="question-text">Why do wesleep at night?</p>
+            </div>
+            <div class="options-container">
+                <button class="option false" onclick="checkAnswer('question-10', false)">A. Because we have to?/button>
+                <button class="option false" onclick="checkAnswer('question-10', false)">B. Because of witches</button>
+                <button class="option true" onclick="checkAnswer('question-10', true)">C. Because the world becomes quiet and peaceful</button>
+                <button class="option false" onclick="checkAnswer('question-10', false)">D. Boredom</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section win-screen">
+        <div class="quiz-screen">
+            <p class="result-texts">GREAT!</p>
+            <div class="result-icon"></div>
+            <p class="result-text"> YOU<br> WIN!</p>
+            <p class="score-text">Score: <span id="score-display"></span>/10</p> 
+
+           
+
+            
+            <div class="result-options">
+                <button class="icon-button" onclick="showSection('start-screen')"></button>
+                <button class="icon-button" onclick="showSection('start-screen')"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section lose-screen">
+        <div class="quiz-screen">
+            <p class="result-texts">NOOO!</p>
+            <p class="result-text">YOU<br>LOST!</p>
+            <p class="score-text">Score: <span id="score-display-lose"></span>/10</p> 
+            
+
+            <h2>Leaderboard</h2>
+                <ul id="leaderboard-list"></ul>
+            </div>
+            <button class="try-again-button"  onclick="clearboard()">Clear Leaderboard</button>
+            <div class="result-options">
+                <button class="try-again-button" onclick="showSection('start-screen')">TRY AGAIN</button>
+            </div>
+            <div class="result-options">
+                <button class="icon-button" onclick="showSection('start-screen')"></button>
+                <button class="icon-button" onclick="showSection('start-screen')"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
